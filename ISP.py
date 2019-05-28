@@ -1,8 +1,11 @@
-# Status: GETTING THERE
-# Purpose:
+# Status: Almost
+# Purpose: A program that checks to see if the user submitted the correct answer for a sudoku puzzle.
 # Author: Imran Virani
 
 # The array for the grid which is needed to display to the user and used to check if the solution is right.
+
+print("Welcome to the best sudoku checker ever!")
+
 grid = [["x", "x", "x", "x", "x", "x", "x", "x", "x"],
         ["x", "x", "x", "x", "x", "x", "x", "x", "x"],
         ["x", "x", "x", "x", "x", "x", "x", "x", "x"],
@@ -76,10 +79,10 @@ while countChecker <= 9:
     else:
         if grid[0].count(countChecker) == 1:
             states.append(False)
-    else:
-        if grid[0].count(countChecker) == 0:
-            states.append(True)
-    countChecker += 1
+        else:
+            if grid[0].count(countChecker) == 0:
+                states.append(True)
+countChecker += 1
 
 # Resets counter to 1 so that the counter can be used again for the next check
 # for duplicates for the next row. This is done for each row so that the counter can check for each number between 1 and 9. This is done 9 times, 1 once for each row, column and list
@@ -101,9 +104,9 @@ while countChecker <= 9:
         if grid[1].count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if grid[1].count(countChecker) == 0:
-            states.append(True)
+        else:
+            if grid[1].count(countChecker) == 0:
+                states.append(True)
 countChecker = 1
 # Checks the third row using the exact same Algorithm as described on line 69-72
 for i in grid[2]:
@@ -122,9 +125,9 @@ while countChecker <= 9:
         if grid[2].count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if grid[2].count(countChecker) == 0:
-            states.append(True)
+        else:
+            if grid[2].count(countChecker) == 0:
+                states.append(True)
 countChecker = 1
 # Checks the fourth row using the exact same Algorithm as described on line 69-72
 for i in grid[3]:
@@ -143,9 +146,9 @@ while countChecker <= 9:
         if grid[3].count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if grid[3].count(countChecker) == 0:
-            states.append(True)
+        else:
+            if grid[3].count(countChecker) == 0:
+                states.append(True)
 countChecker = 1
 # Checks the fifth row using the exact same Algorithm as described on line 69-72
 for i in grid[4]:
@@ -164,9 +167,9 @@ while countChecker <= 9:
         if grid[4].count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if grid[4].count(countChecker) == 0:
-            states.append(True)
+        else:
+            if grid[4].count(countChecker) == 0:
+                states.append(True)
 countChecker = 1
 # Checks the sixth row using the exact same Algorithm as described on line 69-72
 for i in grid[5]:
@@ -185,9 +188,9 @@ while countChecker <= 9:
         if grid[5].count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if grid[5].count(countChecker) == 0:
-            states.append(True)
+        else:
+            if grid[5].count(countChecker) == 0:
+                states.append(True)
 countChecker = 1
 # Checks the seventh row using the exact same Algorithm as described on line 69-72
 for i in grid[6]:
@@ -206,9 +209,9 @@ while countChecker <= 9:
         if grid[6].count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if grid[6].count(countChecker) == 0:
-            states.append(True)
+        else:
+            if grid[6].count(countChecker) == 0:
+                states.append(True)
 countChecker = 1
 # Checks the eighth row using the exact same Algorithm as described on line 69-72
 for i in grid[7]:
@@ -224,9 +227,9 @@ while countChecker <= 9:
         if grid[7].count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if grid[7].count(countChecker) == 0:
-            states.append(True)
+        else:
+            if grid[7].count(countChecker) == 0:
+                states.append(True)
 countChecker = 1
 # Checks the ninth row using the exact same Algorithm as described on line 69-72
 for i in grid[8]:
@@ -242,9 +245,9 @@ while countChecker <= 9:
         if grid[8].count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if grid[8].count(countChecker) == 0:
-            states.append(True)
+        else:
+            if grid[8].count(countChecker) == 0:
+                states.append(True)
 countChecker = 1
 # The array is initialized for each column, containing the numbers that the
 # user inputted previously
@@ -267,9 +270,9 @@ while countChecker <= 9:
         if column1.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if column1.count(countChecker) == 0:
-            states.append(True)
+        else:
+            if column1.count(countChecker) == 0:
+                states.append(True)
 countChecker = 1
 # The same Algorithm used for the rows is used. This is done for each column.
 # The array is updated if there are any duplicates in each column.
@@ -290,9 +293,9 @@ while countChecker <= 9:
         if column2.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if column2.count(countChecker) == 0:
-            states.append(True)
+        else:
+            if column2.count(countChecker) == 0:
+                states.append(True)
 countChecker = 1
 # The same Algorithm used for the rows is used. This is done for each column.
 # The array is updated if there are any duplicates in each column.
@@ -313,9 +316,9 @@ while countChecker <= 9:
         if column3.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if column3.count(countChecker) == 0:
-            states.append(True)
+        else:
+            if column3.count(countChecker) == 0:
+                states.append(True)
 countChecker = 1
 # The same Algorithm used for the rows is used. This is done for each column.
 # The array is updated if there are any duplicates in each column.
@@ -336,9 +339,9 @@ while countChecker <= 9:
         if column4.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if column4.count(countChecker) == 0:
-            states.append(True)
+        else:
+            if column4.count(countChecker) == 0:
+                states.append(True)
 # The same Algorithm used for the rows is used. This is done for each column.
 # The array is updated if there are any duplicates in each column.
 column5 = [grid[0][4],
@@ -358,11 +361,12 @@ while countChecker <= 9:
         if column5.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if column5.count(countChecker) == 0:
-            states.append(True)
+        else:
+            if column5.count(countChecker) == 0:
+                states.append(True)
 # The same Algorithm used for the rows is used. This is done for each column.
 # The array is updated if there are any duplicates in each column.
+
 column6 = [grid[0][5],
            grid[1][5],
            grid[2][5],
@@ -380,9 +384,9 @@ while countChecker <= 9:
         if column6.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if column6.count(countChecker) == 0:
-            states.append(True)
+        else:
+            if column6.count(countChecker) == 0:
+                states.append(True)
 # The same Algorithm used for the rows is used. This is done for each column.
 # The array is updated if there are any duplicates in each column.
 column7 = [grid[0][6],
@@ -402,9 +406,9 @@ while countChecker <= 9:
         if column7.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if column7.count(countChecker) == 0:
-            states.append(True)
+        else:
+            if column7.count(countChecker) == 0:
+                states.append(True)
 # The same Algorithm used for the rows is used. This is done for each column.
 # The array is updated if there are any duplicates in each column.
 column8 = [grid[0][7],
@@ -424,9 +428,9 @@ while countChecker <= 9:
         if column8.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if column8.count(countChecker) == 0:
-            states.append(True)
+        else:
+            if column8.count(countChecker) == 0:
+                states.append(True)
 # The same Algorithm used for the rows is used. This is done for each column.
 # The array is updated if there are any duplicates in each column.
 column9 = [grid[0][8],
@@ -446,9 +450,9 @@ while countChecker <= 9:
         if column9.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if column9.count(countChecker) == 0:
-            states.append(True)
+        else:
+            if column9.count(countChecker) == 0:
+                states.append(True)
 # Initializes each box as an array
 box1 = [grid[0][0], grid[0][1], grid[0][2],
         grid[1][0], grid[1][1], grid[1][2],
@@ -464,9 +468,9 @@ while countChecker <= 9:
         if box1.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if box9.count(countChecker) == 0:
-            states.append(True)
+        else:
+            if box9.count(countChecker) == 0:
+                states.append(True)
 countChecker = 1
 
 box2 = [grid[0][3], grid[0][4], grid[0][5],
@@ -480,9 +484,9 @@ while countChecker <= 9:
         if box2.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if box2.count(countChecker) == 0:
-            states.append(True)
+        else:
+            if box2.count(countChecker) == 0:
+                states.append(True)
 countChecker = 1
 
 box3 = [grid[0][6], grid[0][7], grid[0][8],
@@ -496,9 +500,9 @@ while countChecker <= 9:
         if box3.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if box3.count(countChecker) == 0:
-            states.append(True)
+        else:
+            if box3.count(countChecker) == 0:
+                states.append(True)
 countChecker = 1
 
 box4 = [grid[3][0], grid[4][1], grid[4][2],
@@ -512,9 +516,9 @@ while countChecker <= 9:
         if box4.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if box4.count(countChecker) == 0:
-            states.append(True)
+        else:
+            if box4.count(countChecker) == 0:
+                states.append(True)
 countChecker = 1
 
 box5 = [grid[3][3], grid[4][4], grid[4][5],
@@ -528,9 +532,9 @@ while countChecker <= 9:
         if box5.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if box5.count(countChecker) == 0:
-            states.append(True)
+        else:
+            if box5.count(countChecker) == 0:
+                states.append(True)
 countChecker = 1
 
 box6 = [grid[3][6], grid[4][7], grid[4][8],
@@ -544,9 +548,9 @@ while countChecker <= 9:
         if box6.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if box6.count(countChecker) == 0:
-            states.append(True)
+        else:
+            if box6.count(countChecker) == 0:
+                states.append(True)
 countChecker = 1
 
 box7 = [grid[6][0], grid[4][1], grid[4][2],
@@ -560,9 +564,9 @@ while countChecker <= 9:
         if box7.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if box7.count(countChecker) == 0:
-            states.append(True)
+        else:
+            if box7.count(countChecker) == 0:
+                states.append(True)
 countChecker = 1
 
 box8 = [grid[6][3], grid[4][4], grid[4][5],
@@ -576,9 +580,9 @@ while countChecker <= 9:
         if box8.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if box8.count(countChecker) == 0:
-            states.append(True)
+        else:
+            if box8.count(countChecker) == 0:
+                states.append(True)
 countChecker = 1
 
 box9 = [grid[6][6], grid[6][7], grid[6][8],
@@ -592,9 +596,9 @@ while countChecker <= 9:
         if box9.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-    else:
-        if box9.count(countChecker) == 0:
-            states.append(True)
+        else:
+            if box9.count(countChecker) == 0:
+                states.append(True)
 # Checks to see if any part of the sudoku had any true which means duplicates. If there are none than the solution is correct
 if True in states:
     print("Unfortunately you are incorrect. PLease reattempt")
