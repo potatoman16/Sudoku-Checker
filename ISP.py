@@ -53,9 +53,9 @@ row7Counter = 1
 row8Counter = 1
 row9Counter = 1
 countChecker = 1
-
+# Array needed for the end to check whether the player is correct or not. True is returned if there are any duplicates in an row/column/box
+# If there are any True in the array the solution is incorrect as the rules of sudoku say that there can not be any duplicates in the row/column/box
 states = []
-rowCounter = 0
 gridRefresh()
 # Iterates through the first row and collects inputs for each cell in the sudoku grid
 
@@ -67,8 +67,6 @@ for i in grid[0]:
             input("The value you entered is invalid please enter a number between 1 and 9 for Row 1 Column " + str(row1Counter) + ": "))
     row1Counter += 1
     gridRefresh()
-
-rowCounter = 0
 # Checks the first row by:
 # Algorithm that checks for duplicates in a list and returns true if there are duplicates
 # The count function returns the number times that a indice is repeated in a list.
