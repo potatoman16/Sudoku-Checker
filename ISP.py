@@ -2,7 +2,6 @@
 # Purpose:
 # Author: Imran Virani
 
-
 # The array for the grid which is needed to display to the user and used to check if the solution is right.
 grid = [["x", "x", "x", "x", "x", "x", "x", "x", "x"],
         ["x", "x", "x", "x", "x", "x", "x", "x", "x"],
@@ -51,9 +50,13 @@ row7Counter = 1
 row8Counter = 1
 row9Counter = 1
 countChecker = 1
+# Used to check to make sure that every single row, column and box have no duplicates,
+# each state is stored as True or False, if there is a false in teh array the solution
+# is wrong as there are duplicates, if False is returned there are no duplicates
 states = []
 rowCounter = 0
 gridRefresh()
+# Iterates through the first row and collects inputs for each cell in the sudoku grid
 for i in grid[0]:
     grid[0][row1Counter - 1] = int(
         input("Please enter the value for Row 1 Column " + str(row1Counter) + ": "))
@@ -215,7 +218,8 @@ while countChecker <= 9:
             states.append(False)
             countChecker += 1
 countChecker = 1
-# The array is initialized for each column
+# The array is initialized for each column, containing the numbers that the
+# user inputted previously
 column1 = [grid[0][0],
            grid[1][0],
            grid[2][0],
@@ -396,8 +400,7 @@ while countChecker <= 9:
         if box1.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-
-
+countChecker = 1
 box2 = [grid[0][3], grid[0][4], grid[0][5],
         grid[1][3], grid[1][4], grid[1][5],
         grid[2][3], grid[2][4], grid[2][5]]
@@ -409,8 +412,7 @@ while countChecker <= 9:
         if box2.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-
-
+countChecker = 1
 box3 = [grid[0][6], grid[0][7], grid[0][8],
         grid[1][6], grid[1][7], grid[1][8],
         grid[2][6], grid[2][7], grid[2][8]]
@@ -422,6 +424,7 @@ while countChecker <= 9:
         if box3.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
+countChecker = 1
 
 box4 = [grid[3][0], grid[4][1], grid[4][2],
         grid[4][0], grid[5][1], grid[5][2],
@@ -434,7 +437,7 @@ while countChecker <= 9:
         if box4.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-
+countChecker = 1
 
 box5 = [grid[3][3], grid[4][4], grid[4][5],
         grid[4][0], grid[5][1], grid[5][2],
@@ -447,7 +450,7 @@ while countChecker <= 9:
         if box5.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-
+countChecker = 1
 
 box6 = [grid[3][6], grid[4][7], grid[4][8],
         grid[4][6], grid[5][7], grid[5][8],
@@ -460,7 +463,7 @@ while countChecker <= 9:
         if box6.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-
+countChecker = 1
 
 box7 = [grid[6][0], grid[4][1], grid[4][2],
         grid[7][0], grid[5][1], grid[5][2],
@@ -473,7 +476,7 @@ while countChecker <= 9:
         if box7.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
-
+countChecker = 1
 
 box8 = [grid[6][3], grid[4][4], grid[4][5],
         grid[7][3], grid[5][4], grid[5][5],
@@ -486,6 +489,7 @@ while countChecker <= 9:
         if box8.count(countChecker) == 1:
             states.append(False)
             countChecker += 1
+countChecker = 1
 
 box9 = [grid[6][6], grid[6][7], grid[6][8],
         grid[7][6], grid[7][7], grid[7][8],
