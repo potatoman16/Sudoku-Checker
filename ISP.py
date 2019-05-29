@@ -1,8 +1,8 @@
-# Status: Almost
+# Status: DONE
 # Purpose: A program that checks to see if the user submitted the correct answer for a sudoku puzzle.
 # Author: Imran Virani
 
-
+# Welcome Statement
 print("Welcome to the best sudoku checker ever!")
 # The array for the grid which is needed to display to the user and used to check if the solution is right.
 # "x" is used as a placeholder for the numbers to be entered
@@ -579,6 +579,7 @@ while countChecker <= 9:
                 states.append(True)
     countChecker += 1
 # Checks to see if any part of the sudoku had any true which means duplicates. If there are none than the solution is correct
+# Closing Statement
 if True in states:
     print("Unfortunately you are incorrect. PLease reattempt")
 else:
