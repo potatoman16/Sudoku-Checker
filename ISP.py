@@ -509,15 +509,14 @@ box5 = [grid[3][3], grid[4][4], grid[4][5],
         grid[5][0], grid[6][1], grid[6][2]]
 while countChecker <= 9:
     if box5.count(countChecker) > 1:
-        countChecker += 1
         states.append(True)
     else:
         if box5.count(countChecker) == 1:
             states.append(False)
-            countChecker += 1
         else:
             if box5.count(countChecker) == 0:
                 states.append(True)
+    countChecker += 1
 countChecker = 1
 
 box6 = [grid[3][6], grid[4][7], grid[4][8],
@@ -525,15 +524,14 @@ box6 = [grid[3][6], grid[4][7], grid[4][8],
         grid[5][6], grid[6][7], grid[6][8]]
 while countChecker <= 9:
     if box6.count(countChecker) > 1:
-        countChecker += 1
         states.append(True)
     else:
         if box6.count(countChecker) == 1:
             states.append(False)
-            countChecker += 1
         else:
             if box6.count(countChecker) == 0:
                 states.append(True)
+    countChecker += 1
 countChecker = 1
 
 box7 = [grid[6][0], grid[4][1], grid[4][2],
@@ -541,15 +539,14 @@ box7 = [grid[6][0], grid[4][1], grid[4][2],
         grid[8][0], grid[6][1], grid[6][2]]
 while countChecker <= 9:
     if box7.count(countChecker) > 1:
-        countChecker += 1
         states.append(True)
     else:
         if box7.count(countChecker) == 1:
             states.append(False)
-            countChecker += 1
         else:
             if box7.count(countChecker) == 0:
                 states.append(True)
+    countChecker += 1
 countChecker = 1
 
 box8 = [grid[6][3], grid[4][4], grid[4][5],
@@ -557,15 +554,14 @@ box8 = [grid[6][3], grid[4][4], grid[4][5],
         grid[8][3], grid[6][4], grid[6][5]]
 while countChecker <= 9:
     if box8.count(countChecker) > 1:
-        countChecker += 1
         states.append(True)
     else:
         if box8.count(countChecker) == 1:
             states.append(False)
-            countChecker += 1
         else:
             if box8.count(countChecker) == 0:
                 states.append(True)
+    countChecker += 1
 countChecker = 1
 
 box9 = [grid[6][6], grid[6][7], grid[6][8],
@@ -578,10 +574,10 @@ while countChecker <= 9:
     else:
         if box9.count(countChecker) == 1:
             states.append(False)
-            countChecker += 1
         else:
             if box9.count(countChecker) == 0:
                 states.append(True)
+    countChecker += 1
 # Checks to see if any part of the sudoku had any true which means duplicates. If there are none than the solution is correct
 if True in states:
     print("Unfortunately you are incorrect. PLease reattempt")
