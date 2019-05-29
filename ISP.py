@@ -57,7 +57,8 @@ states = []
 gridRefresh()
 
 # Iterates through the first row and collects inputs for each cell in the sudoku grid
-# Validates each input to make sure that the number that is entered is an integer between 1 and 9.
+# Validates each input to make sure that the number that is entered is an
+# integer (a whole number) between 1 and 9.
 for i in grid[0]:
     grid[0][row1Counter - 1] = int(
         input("Please enter the value for Row 1 Column " + str(row1Counter) + ": "))
