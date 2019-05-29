@@ -53,8 +53,9 @@ countChecker = 1
 # If there are any True in the array the solution is incorrect as the rules of sudoku say that there can not be any duplicates in the row/column/box
 states = []
 
-# Shows empty grid to user
+# Shows empty grid to user - shows the "blank" grid with the x placeholders
 gridRefresh()
+
 # Iterates through the first row and collects inputs for each cell in the sudoku grid
 # Validates each input to make sure that the number that is entered is an integer between 1 and 9.
 for i in grid[0]:
