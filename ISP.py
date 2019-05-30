@@ -16,6 +16,27 @@ grid = [["x", "x", "x", "x", "x", "x", "x", "x", "x"],
         ["x", "x", "x", "x", "x", "x", "x", "x", "x"],
         ["x", "x", "x", "x", "x", "x", "x", "x", "x"]]
 
+'''
+            Column 1-3  Column 4-6  Column 7-9
+         ==========================================
+Row1     |            |            |              |
+Row2     |    Box 1   |   Box 2    |     Box 3    |
+Row3     |            |            |              |
+         ==========================================
+Row 4    |            |            |              |
+Row 5    |    Box 4   |   Box 5    |     Box 6    |
+Row 6    |            |            |              |
+         ==========================================
+Row 7    |            |            |              |
+Row 8    |    Box 7   |   Box 8    |     Box 9    |
+Row 9    |            |            |              |
+         ==========================================
+
+
+
+
+
+'''
 # Functions which displays the grid
 
 
@@ -24,16 +45,16 @@ def gridRefresh():
         print("")
     print("|-----|-----|-----|")
     print("|" + str(grid[0][0]), grid[0][1], str(grid[0][2]) + "|" + str(grid[0][3]), grid[0][4], str(grid[0][5]) + "|" + str(grid[0][6]), grid[0][7], str(grid[0][8]) + "|")
-    print("|" + str(grid[1][0]), grid[1][1], str(grid[1][2]) + "|" + str(grid[1][3]), grid[1][4], grid[1][5] + "|" + str(grid[1][6]), grid[1][7], grid[1][8] + "|")
-    print("|" + str(grid[2][0]), grid[2][1], grid[2][2] + "|" + str(grid[2][3]), grid[2][4], grid[2][5] + "|" + str(grid[2][6]), grid[2][7], grid[2][8] + "|")
+    print("|" + str(grid[1][0]), grid[1][1], str(grid[1][2]) + "|" + str(grid[1][3]), grid[1][4], str(grid[1][5]) + "|" + str(grid[1][6]), grid[1][7], str(grid[1][8]) + "|")
+    print("|" + str(grid[2][0]), grid[2][1], str(grid[2][2]) + "|" + str(grid[2][3]), grid[2][4], str(grid[2][5]) + "|" + str(grid[2][6]), grid[2][7], str(grid[2][8]) + "|")
     print("|-----|-----|-----|")
-    print("|" + str(grid[3][0]), grid[3][1], grid[3][2] + "|" + str(grid[3][3]), grid[3][4], grid[3][5] + "|" + str(grid[3][6]), grid[3][7], grid[3][8] + "|")
-    print("|" + str(grid[4][0]), grid[4][1], grid[4][2] + "|" + str(grid[4][3]), grid[4][4], grid[4][5] + "|" + str(grid[4][6]), grid[4][7], grid[4][8] + "|")
-    print("|" + str(grid[5][0]), grid[5][1], grid[5][2] + "|" + str(grid[5][3]), grid[5][4], grid[5][5] + "|" + str(grid[5][6]), grid[5][7], grid[5][8] + "|")
+    print("|" + str(grid[3][0]), grid[3][1], str(grid[3][2]) + "|" + str(grid[3][3]), grid[3][4], str(grid[3][5]) + "|" + str(grid[3][6]), grid[3][7], str(grid[3][8]) + "|")
+    print("|" + str(grid[4][0]), grid[4][1], str(grid[4][2]) + "|" + str(grid[4][3]), grid[4][4], str(grid[4][5]) + "|" + str(grid[4][6]), grid[4][7], str(grid[4][8]) + "|")
+    print("|" + str(grid[5][0]), grid[5][1], str(grid[5][2]) + "|" + str(grid[5][3]), grid[5][4], str(grid[5][5]) + "|" + str(grid[5][6]), grid[5][7], str(grid[5][8]) + "|")
     print("|-----|-----|-----|")
-    print("|" + str(grid[6][0]), grid[6][1], grid[6][2] + "|" + str(grid[6][3]), grid[6][4], grid[6][5] + "|" + str(grid[6][6]), grid[6][7], grid[6][8] + "|")
-    print("|" + str(grid[7][0]), grid[7][1], grid[7][2] + "|" + str(grid[7][3]), grid[7][4], grid[7][5] + "|" + str(grid[7][6]), grid[7][7], grid[7][8] + "|")
-    print("|" + str(grid[8][0]), grid[8][1], grid[8][2] + "|" + str(grid[8][3]), grid[8][4], grid[8][5] + "|" + str(grid[8][6]), grid[8][7], grid[8][8] + "|")
+    print("|" + str(grid[6][0]), grid[6][1], str(grid[6][2]) + "|" + str(grid[6][3]), grid[6][4], str(grid[6][5]) + "|" + str(grid[6][6]), grid[6][7], str(grid[6][8]) + "|")
+    print("|" + str(grid[7][0]), grid[7][1], str(grid[7][2]) + "|" + str(grid[7][3]), grid[7][4], str(grid[7][5]) + "|" + str(grid[7][6]), grid[7][7], str(grid[7][8]) + "|")
+    print("|" + str(grid[8][0]), grid[8][1], str(grid[8][2]) + "|" + str(grid[8][3]), grid[8][4], str(grid[8][5]) + "|" + str(grid[8][6]), grid[8][7], str(grid[8][8]) + "|")
     print("|-----|-----|-----|")
 
 
@@ -86,11 +107,12 @@ while countChecker <= 9:
 # Resets counter to 1 so that the counter can be used again for the next check
 # for duplicates for the next row. This is done for each row so that the counter can check for each number between 1 and 9. This is done 9 times, 1 once for each row, column and list
 countChecker = 1
+
 # Checks the second row using the same Algorithm as described on line 69-72
 for i in grid[1]:
     grid[1][row2Counter - 1] = int(
         input("Please enter the value for Row 2 Column " + str(row2Counter) + " as an integer between 1 and 9: "))
-    while grid[1][row2Counter - 1] <= 0 or grid[1][row2Counter] > 9:
+    while grid[1][row2Counter - 1] <= 0 or grid[1][row2Counter - 1] > 9:
         grid[1][row2Counter] = int(input(
             "The value you entered is invalid, please enter the number bewteen 1 and 9 for Row 2 Column " + str(row2Counter) + ": "))
     row2Counter += 1
@@ -108,11 +130,12 @@ while countChecker <= 9:
                 states.append(True)
     countChecker += 1
 countChecker = 1
+
 # Checks the third row using the exact same Algorithm as described on line 69-72
 for i in grid[2]:
     grid[2][row3Counter - 1] = int(
         input("Please enter the value for Row 3 Column " + str(row3Counter) + ": "))
-    while grid[2][row3Counter - 1] <= 0 or grid[1][row3Counter] > 9:
+    while grid[2][row3Counter - 1] <= 0 or grid[1][row3Counter - 1] > 9:
         grid[2][row3Counter - 1] = int(
             input("The number you entered is invalid. Please enter the value for Row 3 Column " + str(row3Counter) + " as a number between 1 and 9: "))
     row3Counter += 1
@@ -129,14 +152,16 @@ while countChecker <= 9:
                 states.append(True)
     countChecker += 1
 countChecker = 1
+
 # Checks the fourth row using the exact same Algorithm as described on line 69-72
 for i in grid[3]:
     grid[3][row4Counter - 1] = int(
         input("Please enter the value for Row 4 Column " + str(row4Counter) + ": "))
-    row4Counter += 1
-    while grid[1][row2Counter - 1] <= 0 or grid[1][row2Counter] > 9:
+
+    while grid[3][row4Counter - 1] <= 0 or grid[3][row4Counter - 1] > 9:
         grid[3][row4Counter - 1] = int(
             input("The number you entered is invalid. Please enter the value for Row 4 Column " + str(row4Counter) + " as a number between 1 and 9: "))
+    row4Counter += 1
     gridRefresh()
 while countChecker <= 9:
     if grid[3].count(countChecker) > 1:
@@ -150,6 +175,7 @@ while countChecker <= 9:
     countChecker += 1
 
 countChecker = 1
+
 # Checks the fifth row using the exact same Algorithm as described on line 69-72
 for i in grid[4]:
     grid[4][row5Counter - 1] = int(
@@ -170,11 +196,12 @@ while countChecker <= 9:
                 states.append(True)
     countChecker += 1
 countChecker = 1
+
 # Checks the sixth row using the exact same Algorithm as described on line 69-72
 for i in grid[5]:
     grid[5][row6Counter - 1] = int(
         input("Please enter the value for Row 6 Column " + str(row6Counter) + ": "))
-    while grid[5][row6Counter - 1] <= 0 or grid[5][row6Counter] > 9:
+    while grid[5][row6Counter - 1] <= 0 or grid[5][row6Counter - 1] > 9:
         grid[5][row6Counter - 1] = int(
             input("The value that you entered is invalid. Please enter the value for Row 6 Column " + str(row6Counter) + " as a number between 1 and 9: "))
     row6Counter += 1
@@ -191,11 +218,12 @@ while countChecker <= 9:
                 states.append(True)
     countChecker += 1
 countChecker = 1
+
 # Checks the seventh row using the exact same Algorithm as described on line 69-72
 for i in grid[6]:
     grid[6][row7Counter - 1] = int(
         input("Please enter the value for Row 7 Column " + str(row7Counter) + ": "))
-    while grid[6][row7Counter - 1] <= 0 or grid[6][row7Counter] > 9:
+    while grid[6][row7Counter - 1] <= 0 or grid[6][row7Counter - 1] > 9:
         grid[6][row7Counter - 1] = int(
             input("The value that you entered is invalid. Please enter the value for Row 7 Column " + str(row7Counter) + " as a number between 1 and 9: "))
     row7Counter += 1
@@ -212,10 +240,14 @@ while countChecker <= 9:
                 states.append(True)
     countChecker += 1
 countChecker = 1
+
 # Checks the eighth row using the exact same Algorithm as described on line 69-72
 for i in grid[7]:
     grid[7][row8Counter -
             1] = int(input("Please enter the value for Row 8 Column " + str(row8Counter) + ": "))
+    while grid[7][row8Counter - 1] <= 0 or grid[6][row8Counter - 1] > 9:
+        grid[7][row8Counter - 1] = int(
+            input("The value that you entered is invalid. Please enter the value for Row 8 Column " + str(row7Counter) + " as a number between 1 and 9: "))
     row8Counter += 1
     gridRefresh()
 while countChecker <= 9:
@@ -229,10 +261,14 @@ while countChecker <= 9:
                 states.append(True)
     countChecker += 1
 countChecker = 1
+
 # Checks the ninth row using the exact same Algorithm as described on line 69-72
 for i in grid[8]:
     grid[8][row9Counter -
             1] = int(input("Please enter the value for Row 9 Column " + str(row9Counter) + ": "))
+    while grid[8][row9Counter - 1] <= 0 or grid[6][row9Counter - 1] > 9:
+        grid[8][row9Counter - 1] = int(
+            input("The value that you entered is invalid. Please enter the value for Row 9 Column " + str(row7Counter) + " as a number between 1 and 9: "))
     row9Counter += 1
     gridRefresh()
 while countChecker <= 9:
@@ -246,6 +282,7 @@ while countChecker <= 9:
                 states.append(True)
     countChecker += 1
 countChecker = 1
+
 # The array is initialized for each column, containing the numbers that the
 # user inputted previously
 column1 = [grid[0][0],
@@ -421,6 +458,7 @@ while countChecker <= 9:
             if column8.count(countChecker) == 0:
                 states.append(True)
     countChecker += 1
+
 # The same Algorithm used for the rows is used. This is done for each column.
 # The array is updated if there are any duplicates in each column.
 column9 = [grid[0][8],
@@ -460,7 +498,8 @@ while countChecker <= 9:
                 states.append(True)
     countChecker += 1
 countChecker = 1
-
+# The Algorithm, it counts each number from 1-9 and then checks for
+# duplicates. This is done for every box(repeated 9 times)
 box2 = [grid[0][3], grid[0][4], grid[0][5],
         grid[1][3], grid[1][4], grid[1][5],
         grid[2][3], grid[2][4], grid[2][5]]
@@ -475,7 +514,8 @@ while countChecker <= 9:
                 states.append(True)
     countChecker += 1
 countChecker = 1
-
+# The Algorithm, it counts each number from 1-9 and then checks for
+# duplicates. This is done for every box(repeated 9 times)
 box3 = [grid[0][6], grid[0][7], grid[0][8],
         grid[1][6], grid[1][7], grid[1][8],
         grid[2][6], grid[2][7], grid[2][8]]
@@ -490,7 +530,8 @@ while countChecker <= 9:
                 states.append(True)
     countChecker += 1
 countChecker = 1
-
+# The Algorithm, it counts each number from 1-9 and then checks for
+# duplicates. This is done for every box(repeated 9 times)
 box4 = [grid[3][0], grid[4][1], grid[4][2],
         grid[4][0], grid[5][1], grid[5][2],
         grid[5][0], grid[6][1], grid[6][2]]
@@ -505,7 +546,8 @@ while countChecker <= 9:
                 states.append(True)
     countChecker += 1
 countChecker = 1
-
+# The Algorithm, it counts each number from 1-9 and then checks for
+# duplicates. This is done for every box(repeated 9 times)
 box5 = [grid[3][3], grid[4][4], grid[4][5],
         grid[4][0], grid[5][1], grid[5][2],
         grid[5][0], grid[6][1], grid[6][2]]
@@ -520,7 +562,8 @@ while countChecker <= 9:
                 states.append(True)
     countChecker += 1
 countChecker = 1
-
+# The Algorithm, it counts each number from 1-9 and then checks for
+# duplicates. This is done for every box(repeated 9 times)
 box6 = [grid[3][6], grid[4][7], grid[4][8],
         grid[4][6], grid[5][7], grid[5][8],
         grid[5][6], grid[6][7], grid[6][8]]
@@ -535,7 +578,8 @@ while countChecker <= 9:
                 states.append(True)
     countChecker += 1
 countChecker = 1
-
+# The Algorithm, it counts each number from 1-9 and then checks for
+# duplicates. This is done for every box(repeated 9 times)
 box7 = [grid[6][0], grid[4][1], grid[4][2],
         grid[7][0], grid[5][1], grid[5][2],
         grid[8][0], grid[6][1], grid[6][2]]
@@ -550,7 +594,8 @@ while countChecker <= 9:
                 states.append(True)
     countChecker += 1
 countChecker = 1
-
+# The Algorithm, it counts each number from 1-9 and then checks for
+# duplicates. This is done for every box(repeated 9 times)
 box8 = [grid[6][3], grid[4][4], grid[4][5],
         grid[7][3], grid[5][4], grid[5][5],
         grid[8][3], grid[6][4], grid[6][5]]
@@ -565,7 +610,8 @@ while countChecker <= 9:
                 states.append(True)
     countChecker += 1
 countChecker = 1
-
+# The Algorithm, it counts each number from 1-9 and then checks for
+# duplicates. This is done for every box(repeated 9 times)
 box9 = [grid[6][6], grid[6][7], grid[6][8],
         grid[7][6], grid[7][7], grid[7][8],
         grid[8][6], grid[8][7], grid[8][8]]
@@ -583,6 +629,6 @@ while countChecker <= 9:
 # Checks to see if any part of the sudoku had any true which means duplicates. If there are none than the solution is correct
 # Closing Statement
 if True in states:
-    print("Unfortunately you are incorrect. PLease reattempt")
+    print("Unfortunately you are incorrect. PLease re-attempt")
 else:
     print("Congratulations! The solution that you submitted is correct")
